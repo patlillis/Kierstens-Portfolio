@@ -1,0 +1,11 @@
+<div class="navbar navbar-fixed">
+  <ul class="navbar-right">
+  <% current_page.data.partials.each do |p| %>
+    <% @real_name = p.name.split('_').each{|i| i.capitalize!}.join(' ') %>
+    
+    <li>
+      <a href="#"><%= @real_name %></a>
+    </li>
+  <% end %>
+  </ul>
+</div>
