@@ -1,0 +1,19 @@
+---
+title: Kiersten Lillis
+partials:
+  - { name: home, jumbotron: true }
+  - { name: about_me }
+  - { name: what_i_do, dark: true }
+  - { name: my_work }
+  - { name: contact_me, dark: true }
+---
+
+<%= partial "navbar" %>
+
+<% current_page.data.partials.each do |p| %>
+  <div id="<%=p.name%>" class="section <%= "section-dark" if p.dark %> <%= "jumbotron" if p.jumbotron %>">
+    <div class="container">
+      <%= partial p.name %>
+    </div>
+  </div>
+<% end %>

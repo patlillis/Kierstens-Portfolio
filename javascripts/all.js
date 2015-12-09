@@ -1,1 +1,0 @@
-$(function(){function e(){setTimeout(function(){Waypoint.refreshAll()},1e3)}$(".jumbotron").height($(window).height()+50),$(".message-box").css({marginTop:.4*$(window).height()}),$(window).resize(function(){$(".jumbotron").height($(window).height()),$(".message-box").css({marginTop:.4*$(window).height()}),e()}),$.backstretch("images/header-bg.jpg")});
