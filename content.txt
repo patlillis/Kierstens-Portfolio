@@ -1,0 +1,32 @@
+- Home (Splash Screen)
+- About Me
+	- personal blurb
+	- education
+	- experience
+- What I Do
+	- Quote from Mark?
+	- Job blurb
+	- PDF/downloadable resume
+- My Work
+	- Credits for each one
+	- embedded video player
+	- Demo Reel
+	- St. Catherine of Siena Promo
+	- Sara + Paul’s Wedding Film
+	- After-School All-Stars Dayton Promo
+	- Welcome to Maji Zuwa, Malawi!”
+	- “Women in Engineering Summer Camp at University of Dayton”
+- Contact Me
+	- email
+	- Contact form
+	- links
+		- facebook
+		- twitter
+		- linkedin
+		- google+?
+		- vimeo?
+	- Map
+    
+Palettes:
+1. https://coolors.co/app/D62E45-BD2D48-218982-D9CECA-F26730
+2. https://coolors.co/app/F51A44-000027-00115A-F2E0A0-F1EBDD

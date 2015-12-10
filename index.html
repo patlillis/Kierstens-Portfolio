@@ -1,23 +1,20 @@
 ---
-layout: default
+title: Kiersten Lillis
+partials:
+  - { name: home, jumbotron: true }
+  - { name: about_me }
+  - { name: what_i_do, dark: true }
+  - { name: my_work }
+  - { name: contact_me, dark: true }
 ---
 
-<div class="home">
+{% include _nabar.html %}
 
-  <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+{% for p in page.partials %}
+  <div id="{{p.name}}" class="section {% if p.dark == true %}section-dark{% endif %} {% if p.jumbotron == true %}jumbotron{% endif %}">
+    <div class="container">
+      {% include {{p.name}} %}
+    </div>
+  </div>
+{% endfor %}
