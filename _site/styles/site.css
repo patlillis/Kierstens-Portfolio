@@ -1,0 +1,107 @@
+/* ===== Colors ===== */
+/* Scheme 1 
+$color-primary: #E5847B;
+$color-secondary: #66D7D1;
+$color-light: #FFFCF7;
+$color-dark: #444344;
+*/
+/* Scheme 2 
+$color-primary: #F72C25;
+$color-secondary: #A9E5BB;
+$color-light: #FFFCF7;
+$color-dark: #2D1E2F;
+*/
+/* Scheme 3 */
+/* ===== Other Variables ===== */
+body {
+  background-color: #EDF2F4;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.section {
+  padding: 3rem 0 6rem;
+  background-color: #EDF2F4; }
+
+.section-title {
+  color: #D90429;
+  text-align: center;
+  font-weight: 400;
+  font-size: 4rem;
+  margin-bottom: 50px; }
+  .section-title span {
+    border-bottom: 3px solid;
+    padding: 10px 0; }
+
+.section-dark {
+  background-color: #D90429; }
+
+.section-dark .section-title {
+  color: #EDF2F4; }
+
+.section-subtitle {
+  color: #8D99AE;
+  text-align: center; }
+
+.jumbotron {
+  padding: 0;
+  margin-bottom: 0;
+  min-height: 500px;
+  background: transparent; }
+  .jumbotron .message-box {
+    width: 90%;
+    margin: 300px auto 0;
+    background: #EDF2F4;
+    background: rgba(237, 242, 244, 0.9);
+    padding: 20px 0; }
+
+.accomplishment-card {
+  border: 1px solid #D90429;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 3px 3px 6px -3px rgba(0, 0, 0, 0.75);
+  background-color: #8D99AE; }
+
+p {
+  margin: 0 0 30px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400; }
+
+.text-inverted {
+  color: #EDF2F4; }
+
+#contact-form .form-control {
+  background: #EDF2F4;
+  border: none;
+  border-radius: 1px;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 30px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 300;
+  padding-left: 55px; }
+
+#contact-form .form-group [class*="fa"] {
+  display: block;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  color: #8D99AE;
+  font-size: 32px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 300; }
+
+#contact-form .control-wrapper {
+  position: relative; }
+
+#contact-form textarea.form-control {
+  max-width: 100%;
+  min-width: 100%;
+  padding-top: 14px;
+  margin: 0px 0px 30px;
+  resize: vertical;
+  height: auto; }

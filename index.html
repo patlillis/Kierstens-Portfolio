@@ -1,20 +1,20 @@
 ---
 title: Kiersten Lillis
 partials:
-  - { name: home, jumbotron: true }
-  - { name: about_me }
-  - { name: what_i_do, dark: true }
-  - { name: my_work }
-  - { name: contact_me, dark: true }
+  - { name: 'Home', id: home, jumbotron: true }
+  - { name: 'About Me', id: about_me }
+  - { name: 'What I Do', id: what_i_do, dark: true }
+  - { name: 'My Work', id: my_work }
+  - { name: 'Contact Me', id: contact_me, dark: true }
 ---
 
-{% include _nabar.html %}
+{% include navbar.html %}
 
 
 {% for p in page.partials %}
-  <div id="{{p.name}}" class="section {% if p.dark == true %}section-dark{% endif %} {% if p.jumbotron == true %}jumbotron{% endif %}">
+  <div id="{{p.id}}" class="section {% if p.dark == true %}section-dark{% endif %} {% if p.jumbotron == true %}jumbotron{% endif %}">
     <div class="container">
-      {% include {{p.name}} %}
+      {% include {{p.id}}.html %}
     </div>
   </div>
 {% endfor %}
