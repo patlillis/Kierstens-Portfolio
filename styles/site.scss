@@ -1,7 +1,15 @@
 ---
 ---
+@charset "utf-8";
+
+/* path to glyphicons */
+$icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+/* custom variable */
+$body-bg: red;
 
 @import "variables";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 @charset "utf-8";
 

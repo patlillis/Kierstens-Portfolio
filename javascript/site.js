@@ -19,7 +19,7 @@ $('.message-box').css({'marginTop':$(window).height()*0.4});
 	/*============================================
 	Backstretch Images
 	==============================================*/
-	$.backstretch('images/header-bg.jpg');
+	//$.backstretch('images/header-bg.jpg');
 
 //	$('body').append('<img class="preload-image" src="assets/contact-bg.jpg" style="display:none;"/>');
 
@@ -41,7 +41,7 @@ $('.message-box').css({'marginTop':$(window).height()*0.4});
 	==============================================*/
 	function waypointsRefresh(){
 		setTimeout(function(){
-			Waypoint.refreshAll();
+			//Waypoint.refreshAll();
 		},1000);
 	}
   

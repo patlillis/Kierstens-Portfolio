@@ -15,7 +15,9 @@
 
   <body class="<%= page_classes %>">
     {{ content }}
-    <script type="text/javascript" src="javascript/plugins.js">
-    <script type="text/javascript" src="javascript/site.js">
+    <script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/plugins.js"></script>
+    <script type="text/javascript" src="javascript/site.js"></script>
   </body>
 </html>
