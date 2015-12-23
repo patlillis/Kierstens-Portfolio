@@ -1,0 +1,144 @@
+
+#main-navbar.scrolled .navbar-brand{
+    color: $color-primary;
+}
+
+#main-navbar{
+    background:transparent;
+    box-shadow:0 0 0px transparent;
+    -webkit-transition:background 0.3s ease-out;
+    transition:background 0.3s ease-out, border-width 0.3s ease-out;
+}
+
+#main-navbar:not(.scrolled) {
+    border-width: 0;
+}
+
+#main-navbar.scrolled{
+    background:$color-light;
+    border-bottom:1px solid #ddd;
+}
+
+#main-navbar.scrolled .navbar-toggle{
+    color:$color-primary;
+    border-color:$color-primary;
+}
+
+#main-navbar.scrolled .navbar-toggle .icon-bar{
+    background:$color-primary;
+}
+
+#main-navbar .container{
+    padding:30px 20px;
+    -webkit-transition:padding 0.5s ease-out;
+    transition:padding 0.5s ease-out;
+}
+
+#main-navbar.scrolled .container{
+    padding:10px 20px;
+}
+
+#main-navbar .nav a,
+#main-navbar .nav a:active,
+#main-navbar .nav a:hover{
+    padding:0px 10px;
+    font-size:18px;
+    line-height:54px;
+    font-weight:400;
+    background:transparent;
+}
+
+
+#main-navbar.scrolled .nav a,
+#main-navbar.scrolled .nav a:active,
+#main-navbar.scrolled .nav a:hover{
+    color:$color-primary;
+}
+
+
+#main-navbar li{
+    background:transparent;
+    margin:0 10px;
+    border:2px solid transparent;
+}
+
+#main-navbar .dropdown-menu a{
+    font-size:14px;
+}
+
+/* Hover Effect */
+#main-navbar .nav a {
+    position:relative;
+}
+
+/*#main-navbar .nav a:before {
+	position: absolute;
+	bottom:-5px;
+	left: 50%;
+	color: transparent;
+	content: '•';
+	text-shadow: 0 0 transparent;
+	font-size: 16px;
+	line-height:21px;
+	-webkit-transition: text-shadow 0.3s, color 0.3s;
+	-moz-transition: text-shadow 0.3s, color 0.3s;
+	transition: text-shadow 0.3s, color 0.3s;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+	pointer-events: none;
+}
+
+#main-navbar .nav a:hover:before,
+#main-navbar .nav li.active a:before {
+	text-shadow: 12px 0 #fff, -12px 0 #fff;
+}
+
+#main-navbar.scrolled .nav a:hover:before,
+#main-navbar.scrolled .nav li.active a:before {
+	color: #74c7d5;
+	text-shadow: 12px 0 $color-primary, -12px 0 #74c7d5;
+}*/
+
+
+@media (max-width: 768px) {
+
+    #main-nav .navbar-brand{
+        color:$color-primary;
+    }
+
+    #main-nav{
+        background:$color-light;
+        border-bottom-width:1px;
+    }
+
+    #main-nav .navbar-toggle{
+        color:$color-primary;
+        border-color:$color-primary;
+    }
+
+    #main-nav .navbar-toggle .icon-bar{
+        background:$color-primary;
+    }
+
+    #main-nav .container{
+        padding:10px 20px;
+    }
+
+    #main-nav .nav a,
+    #main-nav .nav a:active,
+    #main-nav .nav a:hover{
+        color:$color-primary;
+        line-height:42px;
+        text-align:center;
+    }
+
+    #main-nav .nav a:before {
+        display:none;
+    }
+
+    #main-nav .nav a:hover,
+    #main-nav .nav li.active a {
+        box-shadow:0 0 0 1px;
+    }
+}
