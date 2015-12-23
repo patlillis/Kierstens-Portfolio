@@ -9,15 +9,15 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>{{ page.title }}</title>
 
-    <link rel="stylesheet" type="text/css" href="styles/plugins.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="styles/site.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class="{{ page_classes }}">
     {{ content }}
     <script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="javascript/plugins.js"></script>
     <script type="text/javascript" src="javascript/site.js"></script>
   </body>
 </html>

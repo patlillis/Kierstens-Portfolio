@@ -5,17 +5,24 @@
 /* path to glyphicons */
 $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
-/* custom variable */
-$body-bg: red;
-
 @import "variables";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "navbar";
 
 @charset "utf-8";
 
 body {
   background-color: $bg-color;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: $font-color;
+}
+
+@media screen {
+	input:focus, textarea:focus, button:focus {
+	    outline: none;
+	}
 }
 
 .section {
@@ -26,17 +33,19 @@ body {
 .section-title {
   color: $color-primary;
   text-align: center;
-  font-weight: 400;
-  font-size: 4rem;
+  font-weight: 600;
+  text-transform: uppercase;
   margin-bottom: 50px;
   span {
     border-bottom: 3px solid;
     padding: 10px 0;
+    line-height: 1.7;
   }
 }
 
 .section-dark {
   background-color: $color-primary;
+  color: $color-light;
 }
 
 .section-dark .section-title {
@@ -48,7 +57,7 @@ body {
   text-align: center;
 }
 
-.jumbotron {
+.hero {
   padding: 0;
   margin-bottom: 0;
   min-height: 500px;
@@ -56,19 +65,19 @@ body {
   .message-box {
     width: 90%;
     margin: 300px auto 0;
-    background: $color-light;
-    background: rgba( $color-light, .9);
+    background: $color-dark;
+    background: rgba( $color-dark, .2);
     padding: 20px 0;
   }
 }
 
 .accomplishment-card {
-  border: 1px solid $color-primary;
+  border: 1px solid $color-light;
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 6px;
   box-shadow: 3px 3px 6px -3px rgba(0, 0, 0, 0.75);
-  background-color: $color-secondary;
+  background-color: $color-primary;
 }
 
 p {
@@ -82,8 +91,39 @@ p {
   color: $color-light;
 }
 
+.button {
+	display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 8px 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+.button.ghost-button {
+	background-color: transparent;
+    border: 2px solid $color-dark;
+    font-weight: 600;
+    transition: background-color .3s ease-out, color .3s ease-out;
+}
+
+.button.ghost-button:hover {
+	background-color: $color-dark;
+	color: $color-light;
+}
 #contact-form .form-control {
-    background: $color-light;
+    background: $color-dark;
+    color: $color-light;
     border: none;
     border-radius: 1px;
     outline: none;
@@ -101,7 +141,7 @@ p {
     position: absolute;
     top: 0;
     left: 5px;
-    color: $color-secondary;
+    // color: $color-primary;
     font-size: 32px;
     line-height: 50px;
     text-align: center;
@@ -116,4 +156,40 @@ p {
     margin: 0px 0px 30px;
     resize: vertical;
     height: auto;
+}
+
+
+.social-links {
+    list-style:none;
+    margin:0;
+    padding:0;
+    margin-bottom:30px;
+}
+
+.social-links li{
+    display:inline-block;
+    margin:0 5px;
+    border-radius:3px;
+    box-shadow:0 4px 0 transparent;
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+}
+
+.social-links li a {
+    display:block;
+    color:rgba($color-light, 0.9);
+    font-size:21px;
+    width:50px;
+    height:50px;
+    line-height:50px;
+    text-align:center;
+    background:rgba(0,0,0,0.2);
+    border-radius:50%;
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+}
+
+.social-links li a:hover {
+    color:$color-light;
+    background:$color-primary;
 }
