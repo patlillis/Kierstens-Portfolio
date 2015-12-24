@@ -1,0 +1,212 @@
+#my_work {
+
+		/*-----------------------------------------------------------------------------------*/
+	/*	PORTFOLIO
+	/*-----------------------------------------------------------------------------------*/
+
+
+	.portfolio-meta img 
+	{
+		height:28px !important;
+		width:28px !important;
+	}
+	.frame-overlay  img 
+	{
+		width:auto;
+		height:auto;
+		margin: 0 auto;
+	}
+	.item-image
+	{
+		position:relative;
+		height:100% !important;
+		display:block;
+	}
+
+	.item-image img
+	{
+		display:block;
+	}
+
+
+	.frame-overlay
+	{
+		background:#FFAE00;
+		opacity: 0;
+		width:100%;
+		height:100%;
+		position:absolute;
+		z-index:998;
+		text-align:center;
+		transition: opacity 0.2s ease-in;
+	}
+
+	.item:hover .frame-overlay
+	{
+		opacity:0.8!important;
+	}
+
+
+	.portfolio-meta
+	{
+		opacity:0;
+		letter-spacing: -0.7px;
+		position: absolute;
+		top: 28%;
+		text-align: center;
+		font-size: 20px;
+		color: #000;
+		vertical-align: middle;
+		display: block;
+		font-weight: 600;
+		width:100%;
+		z-index:999;
+		transition: opacity 0.2s ease-in;
+	}
+
+	.portfolio-meta img {
+		position:absolute;
+		left:45%;
+	}	
+	.item:hover .portfolio-meta 
+	{
+		opacity:0.8!important;
+	}
+}
+
+
+/* Fade-move animation for second dialog */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+
+	-webkit-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	-moz-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	-ms-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	-o-transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+	transform: translateY(-20px) perspective( 600px ) rotateX( 10deg );
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog 
+{
+	opacity: 1;
+	-webkit-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	-moz-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	-ms-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	-o-transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+	transform: translateY(0) perspective( 600px ) rotateX( 0 ); 
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog 
+{
+	opacity: 0;
+
+	-webkit-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	-moz-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	-ms-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	-o-transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+	transform: translateY(-10px) perspective( 600px ) rotateX( 10deg ); 
+}
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg
+{
+	opacity: 0;
+
+	-webkit-transition: opacity 0.3s ease-out; 
+	-moz-transition: opacity 0.3s ease-out; 
+	-o-transition: opacity 0.3s ease-out; 
+	transition: opacity 0.3s ease-out;
+
+}
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg  
+{
+	opacity: 0.9;
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg 
+{
+	opacity: 0;
+}
+
+
+/* magnific PopUp */
+.mfp-bg 
+{
+	background: #fff !important;
+}
+
+.white-popup-block 
+{
+	color: #000 !important;
+}
+
+button.mfp-close, button.mfp-arrow 
+{
+	width: 30px !important;
+	height: 30px;
+	background: url(../images/sprite.png) 2px 1px no-repeat!important; 
+	cursor: pointer;
+	text-indent:999px;
+	margin-right:-21px;
+	margin-top:-21px;
+} 
+/* Close button */
+
+div.pp_default .pp_loaderIcon { background: url(../img/prettyPhoto/default/light_loader.gif) center center no-repeat; } 
+	/* Loader icon */
+div.pp_default .pp_description{ color:#000;}
+
+.mfp-content h1, .mfp-content h2, .mfp-content h3, .mfp-content h4,.mfp-content h5, .mfp-content h6 
+{
+	color : #000 !important;
+}
+
+.mfp-wrap
+ {
+	overflow-x:hidden;
+	overflow-y:auto;
+	z-index: 10043 !important;
+}
+
+/* prev / next links */
+.cycle-prev, .cycle-next 
+{
+	 position: absolute;
+	top: 0;
+	width: 30%; 
+	opacity: 0.7; 
+	z-index: 800; 
+	height: 100%; 
+	cursor: pointer; 
+
+	-moz-transition:all 500ms ease 0s;
+	-o-transition:all 500ms ease 0s;
+	-webkit-transition:all 500ms ease 0s;
+	transition:all 500ms ease 0s;
+}
+
+.cycle-prev 
+{ 
+	left: 0;  
+	background: url(assets/img/prettyPhoto/default/left.png) 50% 50% no-repeat;
+}
+
+.cycle-next 
+{ 
+	right: 0; 
+	background: url(assets/img/prettyPhoto/default/right.png) 50% 50% no-repeat;
+}
+
+.cycle-prev:hover, .cycle-next:hover 
+{ 
+	opacity: 1; 
+}
