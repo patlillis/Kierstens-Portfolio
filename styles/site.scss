@@ -11,6 +11,7 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 // sass for Partials
 @import "navbar";
 @import "my_work";
+@import "about_me";
 
 @charset "utf-8";
 
@@ -26,6 +27,14 @@ body {
   padding-bottom: 30px;
 }
 
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
+}
+
 img
 {
   max-width:100%;
@@ -39,7 +48,7 @@ img
 }
 
 .section {
-  padding: 3rem 0 6rem;
+  padding: 80px 0 40px;
   background-color: $color-light;
 }
 
