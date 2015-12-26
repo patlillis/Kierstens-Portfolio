@@ -10,22 +10,13 @@
     transition:background 0.3s ease-out, border-width 0.3s ease-out;
 }
 
-#main-navbar:not(.scrolled) {
+#main-navbar {
     border-width: 0;
 }
 
 #main-navbar.scrolled{
     background:$color-light;
     border-bottom:1px solid #ddd;
-}
-
-#main-navbar.scrolled .navbar-toggle{
-    color:$color-primary;
-    border-color:$color-primary;
-}
-
-#main-navbar.scrolled .navbar-toggle .icon-bar{
-    background:$color-primary;
 }
 
 #main-navbar .container{
@@ -71,35 +62,6 @@
     position:relative;
 }
 
-/*#main-navbar .nav a:before {
-	position: absolute;
-	bottom:-5px;
-	left: 50%;
-	color: transparent;
-	content: '•';
-	text-shadow: 0 0 transparent;
-	font-size: 16px;
-	line-height:21px;
-	-webkit-transition: text-shadow 0.3s, color 0.3s;
-	-moz-transition: text-shadow 0.3s, color 0.3s;
-	transition: text-shadow 0.3s, color 0.3s;
-	-webkit-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	transform: translateX(-50%);
-	pointer-events: none;
-}
-
-#main-navbar .nav a:hover:before,
-#main-navbar .nav li.active a:before {
-	text-shadow: 12px 0 #fff, -12px 0 #fff;
-}
-
-#main-navbar.scrolled .nav a:hover:before,
-#main-navbar.scrolled .nav li.active a:before {
-	color: #74c7d5;
-	text-shadow: 12px 0 $color-primary, -12px 0 #74c7d5;
-}*/
-
 
 @media (max-width: 768px) {
 
@@ -110,11 +72,6 @@
     #main-nav{
         background:$color-light;
         border-bottom-width:1px;
-    }
-
-    #main-nav .navbar-toggle{
-        color:$color-primary;
-        border-color:$color-primary;
     }
 
     #main-nav .navbar-toggle .icon-bar{
@@ -140,5 +97,15 @@
     #main-nav .nav a:hover,
     #main-nav .nav li.active a {
         box-shadow:0 0 0 1px;
+    }
+
+    #main-navbar .container{
+        padding:10px 20px;
+    }
+
+
+    #main-navbar {
+        background:$color-light;
+        border-bottom:1px solid #ddd;
     }
 }
