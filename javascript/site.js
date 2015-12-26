@@ -87,6 +87,7 @@ $(function() {
  		'</div>';
  	}
 
+ 	$('body').append('<p>' + $(window).width() + '</p>');
  	
 	var timelineBlocks = $('.cd-timeline-block'),
 		offset = 0.8;
