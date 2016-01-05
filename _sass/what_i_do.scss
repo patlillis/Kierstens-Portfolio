@@ -1,0 +1,29 @@
+.skill-item {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.skill-item i {
+    display: inline-block;
+    margin: 15px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: $color-light;
+    font-size: 80px;
+    background: $color-primary;
+    padding: 35px 25px;
+}
+
+.skill-item img {
+    margin: 15px;
+    border-radius: 50%;
+    color: $color-light;
+    background: $color-dark;
+    padding: 25px 25px;
+    width: 150px;
+}

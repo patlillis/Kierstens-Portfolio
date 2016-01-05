@@ -10,14 +10,15 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 // sass for Partials
 @import "navbar";
-@import "my_work";
 @import "about_me";
+@import "what_i_do";
+@import "my_work";
 
 @charset "utf-8";
 
 body {
   background-color: $bg-color;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 300;
   color: $font-color;
@@ -55,14 +56,27 @@ img
 .section-title {
   color: $color-primary;
   text-align: center;
-  font-weight: 600;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin-bottom: 50px;
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 72px;
+  letter-spacing: -2px;
   span {
-    border-bottom: 3px solid;
+    border-bottom: 5px solid;
     padding: 10px 0;
     line-height: 1.7;
   }
+}
+
+.subsection-title {
+  font-weight: 300;
+  color: lighten($color-primary, 30%);
+  text-align: center;
+}
+
+.site-title {
+  text-transform: capitalize;
 }
 
 .section-dark {

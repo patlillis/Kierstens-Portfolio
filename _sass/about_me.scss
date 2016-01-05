@@ -1,12 +1,5 @@
 /* -------------------------------- 
 
-Primary style
-
--------------------------------- */
-
-
-/* -------------------------------- 
-
 Modules - reusable parts of our design
 
 -------------------------------- */
@@ -219,7 +212,7 @@ Main components
 }
 .cd-timeline-content .cd-date {
   float: left;
-  padding: .8em 0;
+  padding: .8em 0 0;
   opacity: .7;
 }
 .cd-timeline-content::before {
@@ -252,6 +245,7 @@ Main components
     width: 100%;
     left: 122%;
     top: 6px;
+    color: $color-light;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;
