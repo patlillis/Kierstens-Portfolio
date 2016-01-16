@@ -13,9 +13,11 @@
     <div class="collapse navbar-collapse" id="navabr">
       <ul class="nav navbar-nav navbar-right">
         {% for p in page.partials %}
+          {% if p.menu != false %}
           <li>
             <a href="#{{ p.id }}" data-scroll>{{ p.name }}</a>
           </li>
+          {% endif %}
         {% endfor %}
       </ul>
     </div><!-- /.navbar-collapse -->

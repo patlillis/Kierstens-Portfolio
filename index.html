@@ -5,6 +5,7 @@ partials:
   - { name: 'About Me', id: about_me, dark: true }
   - { name: 'What I Do', id: what_i_do }
   - { name: 'My Work', id: my_work, dark: true }
+  - { name: 'Quote', id: quote, bg_img: 'images/symphony.png', menu: false }
   - { name: 'Contact Me', id: contact_me }
 ---
 
@@ -13,7 +14,8 @@ partials:
 {% for p in page.partials %}
   <div id="{{p.id}}" class="section
     {% if p.dark == true %}section-dark{% endif %}
-    {% if p.hero == true %}hero{% endif %}">
+    {% if p.hero == true %}hero{% endif %}"
+    {% if p.bg_img != null %}style="background: url('{{p.bg_img}}')"{% endif %}>
     <div class="container">
       {% include {{p.id}}.html %}
     </div>

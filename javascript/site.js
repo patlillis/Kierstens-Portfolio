@@ -3,7 +3,7 @@
 
 
 $(function() {
-	$('.hero').height($(window).height()+50);
+	$('.hero').height($(window).height());
 
 	$('.message-box').css({'marginTop':$(window).height()*0.4});
 
