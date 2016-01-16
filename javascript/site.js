@@ -52,11 +52,11 @@ $(function() {
 	},
 	{
 		title: 'Roemer Wedding Video',
-		description: "Wedding recap film. Footage captures by VideoMagic Productions."
+		description: "Wedding recap film. Footage captured by VideoMagic Productions."
 	},
 	{
 		title: 'Bronik Wedding Video',
-		description: "Wedding recap film. Footage captures by VideoMagic Productions."
+		description: "Wedding recap film. Footage captured by VideoMagic Productions."
 	}
 	];
 
