@@ -1,6 +1,6 @@
 
 #main-navbar.scrolled .navbar-brand{
-    color: $color-primary;
+    color: $color-dark;
 }
 
 #main-navbar{
@@ -16,7 +16,7 @@
 
 #main-navbar.scrolled{
     background:$color-light;
-    border-bottom:1px solid #ddd;
+    border-bottom:1px solid rgba($color-dark, 0.3);
 }
 
 #main-navbar .container{
@@ -43,7 +43,7 @@
 #main-navbar.scrolled .nav a,
 #main-navbar.scrolled .nav a:active,
 #main-navbar.scrolled .nav a:hover{
-    color:$color-primary;
+    color:$color-dark;
 }
 
 
@@ -66,7 +66,7 @@
 @media (max-width: 768px) {
 
     #main-nav .navbar-brand{
-        color:$color-primary;
+        color:$color-dark;
     }
 
     #main-nav{
@@ -75,7 +75,7 @@
     }
 
     #main-nav .navbar-toggle .icon-bar{
-        background:$color-primary;
+        background:$color-dark;
     }
 
     #main-nav .container{
@@ -85,7 +85,7 @@
     #main-nav .nav a,
     #main-nav .nav a:active,
     #main-nav .nav a:hover{
-        color:$color-primary;
+        color:$color-dark;
         line-height:42px;
         text-align:center;
     }
@@ -108,4 +108,9 @@
         background:$color-light;
         border-bottom:1px solid #ddd;
     }
+}
+
+/* ===== COlors ====== */
+#main-navbar .navbar-nav > li > a {
+    color: $color-dark;
 }

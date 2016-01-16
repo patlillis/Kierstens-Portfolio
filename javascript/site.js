@@ -77,10 +77,15 @@ $(function() {
 		});
 	}
 
+	// Make sure close button works
+	$(document).on('click', '.mfp-close-custom', function() {
+		portfolioItems.magnificPopup('close');
+	});
+
  	// HTML markup of popup, `mfp-close` will be replaced by the close button
  	function magnificPopupContent(title, description) {
  		return '<div class="mfp-iframe-scaler" style="overflow: initial;">'+
- 		'<div class="mfp-close"></div>'+
+ 		'<button class="mfp-close-custom"><i class="glyphicon glyphicon-remove"></i></button>'+
  		'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
  		'<h3>' + title + '</h5>' +
  		"<p>" + description + "</p>" +
