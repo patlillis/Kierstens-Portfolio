@@ -98,7 +98,9 @@ img
   padding: 0;
   margin-bottom: 0;
   min-height: 500px;
-  background: transparent;
+  background-image: url('../images/headshot.jpg');
+  background-size: cover;
+  background-position: 0 70%;
   .message-box {
     width: 90%;
     margin: 300px auto 0;
