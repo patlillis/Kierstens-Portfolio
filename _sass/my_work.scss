@@ -39,7 +39,7 @@
 		position:absolute;
 		z-index:998;
 		text-align:center;
-		transition: opacity 0.2s ease-in;
+		transition: opacity 0.15s ease-in;
 	}
 
 	.item-image:hover .frame-overlay
@@ -129,7 +129,7 @@
 /* animate in */
 .my-mfp-slide-bottom.mfp-ready.mfp-bg  
 {
-	opacity: 0.9;
+	opacity: 0.96;
 }
 
 /* animate out */

@@ -50,7 +50,7 @@ img
 }
 
 .section {
-  padding: 80px 0 40px;
+  padding: 40px 0 40px;
   background-color: $color-light;
 }
 
@@ -58,6 +58,7 @@ img
   color: $color-dark;
   text-align: center;
   text-transform: capitalize;
+  margin-top: 0;
   margin-bottom: 50px;
   font-size: 60px;
   font-weight: 800;
