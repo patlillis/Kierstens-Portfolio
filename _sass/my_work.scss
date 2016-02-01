@@ -274,3 +274,10 @@ div.pp_default .pp_description {
  //    width: 100%;
 	// top: -40px;
 }
+
+
+@media (max-width: 767px) {
+	.item:not(:last-child) {
+		margin-bottom: 15px;
+	}
+}

@@ -1,123 +1,139 @@
-
-#main-navbar.scrolled .navbar-brand{
+#main-navbar.scrolled .navbar-brand {
     color: $color-dark;
 }
 
-#main-navbar{
-    background:transparent;
-    box-shadow:0 0 0px transparent;
-    -webkit-transition:background 0.2s ease-in-out;
-    transition:background 0.2s ease-in-out;
+#main-navbar {
+    background: transparent;
+    box-shadow: 0 0 0px transparent;
+    -webkit-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
     border-width: 0;
 }
 
-#main-navbar.scrolled{
-    background:$color-light;
-    border-bottom:1px solid $color-dark;
+#main-navbar.scrolled {
+    background: $color-light;
+    border-bottom: 1px solid $color-dark;
 }
 
-#main-navbar .container{
-    padding:30px 20px;
-    -webkit-transition:padding 0.2s ease-in-out;
-    transition:padding 0.2s ease-in-out;
+#main-navbar .container {
+    padding: 30px 20px;
+    -webkit-transition: padding 0.2s ease-in-out;
+    transition: padding 0.2s ease-in-out;
 }
 
-#main-navbar.scrolled .container{
-    padding:10px 20px;
+#main-navbar.scrolled .container {
+    padding: 10px 20px;
 }
 
 #main-navbar .nav a,
 #main-navbar .nav a:active,
-#main-navbar .nav a:hover{
-    padding:0px 10px;
-    font-size:18px;
-    line-height:54px;
-    font-weight:400;
-    background:transparent;
+#main-navbar .nav a:hover {
+    padding: 0px 10px;
+    font-size: 18px;
+    line-height: 54px;
+    font-weight: 400;
+    background: transparent;
 }
-
 
 #main-navbar.scrolled .nav a,
 #main-navbar.scrolled .nav a:active,
-#main-navbar.scrolled .nav a:hover{
-    color:$color-dark;
+#main-navbar.scrolled .nav a:hover {
+    color: $color-dark;
 }
 
-
-#main-navbar li{
-    background:transparent;
-    margin:0 10px;
-    border:2px solid transparent;
+#main-navbar li {
+    background: transparent;
+    margin: 0 10px;
+    border: 2px solid transparent;
 }
 
-#main-navbar .dropdown-menu a{
-    font-size:14px;
+#main-navbar .dropdown-menu a {
+    font-size: 14px;
 }
+
 
 /* Hover Effect */
+
 #main-navbar .nav a {
-    position:relative;
+    position: relative;
 }
 
+
 /* ===== COlors ====== */
+
 #main-navbar .navbar-nav > li > a {
     color: $color-light;
 }
 
+.navbar-default .navbar-toggle {
+    border-color: $color-dark;
+}
+
+#main-navbar .navbar-toggle .icon-bar {
+    background: $color-dark;
+}
+
+#main-navbar .navbar-toggle:hover,
+#main-navbar .navbar-toggle:focus,
+#main-navbar .navbar-toggle:not(.collapsed) {
+    background-color: $color-dark;
+    border-color: $color-light;
+}
+
+#main-navbar .navbar-toggle:hover .icon-bar,
+#main-navbar .navbar-toggle:focus .icon-bar,
+#main-navbar .navbar-toggle:not(.collapsed) .icon-bar {
+    background: $color-light;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: $color-dark;
+}
+
 @media (max-width: 767px) {
-
-    #main-navbar .navbar-brand{
-        color:$color-dark;
+    #main-navbar .navbar-brand {
+        color: $color-dark;
     }
-
     #main-navbar .navbar-nav {
         margin-top: 0;
         margin-bottom: 0;
     }
-
-    #main-navbar{
-        background:$color-light;
-        border-bottom-width:1px;
+    #main-navbar {
+        background: $color-light;
+        border-bottom-width: 1px;
     }
-
-    #main-navbar .navbar-toggle .icon-bar{
-        background:$color-dark;
-    }
-
     #main-navbar.scrolled .container,
     #main-navbar:not(.scrolled) .container {
-        padding:0px 20px;
+        padding: 0px 20px;
     }
-
-
     #main-navbar .nav li {
         margin: 0;
     }
-
     #main-navbar .nav a,
     #main-navbar .nav a:active,
-    #main-navbar .nav a:hover{
+    #main-navbar .nav a:hover {
         color: $color-dark;
-        text-align:center;
+        text-align: center;
     }
-
     #main-navbar .nav li:active,
     #main-navbar .nav li:focus,
-    #main-navbar .nav li:hover{
+    #main-navbar .nav li:hover {
         background-color: rgba($color-dark, 0.2);
     }
-
     #main-navbar .nav a:before {
-        display:none;
+        display: none;
     }
-
-
     #main-navbar {
-        background:$color-light;
-        border-bottom:1px solid #ddd;
+        background: $color-light;
+        border-bottom: 1px solid $color-dark;
     }
-
-
+    .container > .navbar-header,
+    .container > .navbar-collapse,
+    .container-fluid > .navbar-header,
+    .container-fluid > .navbar-collapse {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
     /* ===== COlors ====== */
     #main-navbar .navbar-nav > li > a {
         color: $color-dark;

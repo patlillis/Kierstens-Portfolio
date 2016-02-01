@@ -50,7 +50,7 @@ img
 }
 
 .section {
-  padding: 40px 0 40px;
+  padding: 40px 0;
   background-color: $color-light;
 }
 
@@ -265,3 +265,14 @@ p {
 // :placeholder-shown {
 //   color: $color-light;
 // }
+
+@media (max-width: 767px) { 
+  .section {
+    padding: 15px 0;
+  }
+
+
+  .row.row-padding {
+    padding-bottom: 15px;
+  }
+}

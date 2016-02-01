@@ -112,7 +112,7 @@ $(function() {
     }
 
     smoothScroll.init({
-        offset: 78,
+        // offset: 78,
         scrollOnLoad: false
     });
 
