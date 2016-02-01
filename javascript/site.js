@@ -19,20 +19,17 @@ $(function() {
         });
     });
 
-    if ($(window).scrollTop() === 0) {
-        $('#main-navbar').removeClass('scrolled');
-    } else {
-        $('#main-navbar').addClass('scrolled');
-    }
-
-    $(window).scroll(function() {
+    $(window).scroll(setNavScrolled);
+    setNavScrolled();
+    function setNavScrolled() {
         //Handle navbar
         if ($(window).scrollTop() === 0) {
             $('#main-navbar').removeClass('scrolled');
         } else {
             $('#main-navbar').addClass('scrolled');
         }
-    });
+    }
+
 
     var portfolioItems = $('#my_work .item-image');
     var portfolioItemsData = [{

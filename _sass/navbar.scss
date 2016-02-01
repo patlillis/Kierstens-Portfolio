@@ -6,24 +6,24 @@
 #main-navbar{
     background:transparent;
     box-shadow:0 0 0px transparent;
-    -webkit-transition:background 0.3s ease-out;
-    transition:background 0.3s ease-out, border-width 0.3s ease-out;
+    -webkit-transition:background 0.2s ease-in-out;
+    transition:background 0.2s ease-in-out;
     border-width: 0;
 }
 
 #main-navbar.scrolled{
     background:$color-light;
-    // border-bottom:1px solid rgba($color-dark, 0.3);
+    border-bottom:1px solid $color-dark;
 }
 
 #main-navbar .container{
     padding:30px 20px;
-    -webkit-transition:padding 0.5s ease-out;
-    transition:padding 0.5s ease-out;
+    -webkit-transition:padding 0.2s ease-in-out;
+    transition:padding 0.2s ease-in-out;
 }
 
 #main-navbar.scrolled .container{
-    padding:0 20px;
+    padding:10px 20px;
 }
 
 #main-navbar .nav a,
@@ -84,7 +84,8 @@
         background:$color-dark;
     }
 
-    #main-navbar .container{
+    #main-navbar.scrolled .container,
+    #main-navbar:not(.scrolled) .container {
         padding:0px 20px;
     }
 
@@ -108,10 +109,6 @@
 
     #main-navbar .nav a:before {
         display:none;
-    }
-
-    #main-navbar .container{
-        padding: 14px 20px;
     }
 
 
