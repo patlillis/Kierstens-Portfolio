@@ -134,6 +134,12 @@
         margin-left: -20px;
         margin-right: -20px;
     }
+
+    #main-navbar .navbar-toggle {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
     /* ===== COlors ====== */
     #main-navbar .navbar-nav > li > a {
         color: $color-dark;

@@ -3,23 +3,46 @@
 
 
 $(function() {
-    $('.hero').height($(window).height());
-
-    $('.message-box').css({
-        'marginTop': $(window).height() * 0.4
-    });
-
     /*============================================
-    	Resize Functions
-    	==============================================*/
-    $(window).resize(function() {
+	Resize Functions
+	==============================================*/
+    $(window).resize(onResize);
+    var prevWidth = -1;
+    onResize();
+    function onResize() {
         $('.hero').height($(window).height());
         $('.message-box').css({
             'marginTop': $(window).height() * 0.4
         });
-    });
+
+        var width = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+
+        var isMobile = width < 768;
+        var prevIsMobile = prevWidth > 768;
+        if (prevWidth == -1) prevIsMobile = !isMobile;
+
+        if (isMobile && !prevIsMobile) {
+            console.log('Switching to Mobile');
+            smoothScroll.init({
+                offset: 65,
+                scrollOnLoad: false
+            });
+        }
+        else if (!isMobile && prevIsMobile) {
+            console.log('Switching out of  Mobile');
+            smoothScroll.init({
+                offset: 78,
+                scrollOnLoad: false
+            });
+        }
+
+        prevWidth = width;
+    }
 
     $(window).scroll(setNavScrolled);
+
     setNavScrolled();
     function setNavScrolled() {
         //Handle navbar
@@ -77,15 +100,15 @@ $(function() {
     // HTML markup of popup, `mfp-close` will be replaced by the close button
     function magnificPopupContent(title, description) {
         return '<div class="mfp-iframe-scaler" style="overflow: initial;">' +
-            '<button class="mfp-close-custom"><i class="glyphicon glyphicon-remove"></i></button>' +
-            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-            '<h3>' + title + '</h5>' +
-            "<p>" + description + "</p>" +
-            '</div>';
+        '<button class="mfp-close-custom"><i class="glyphicon glyphicon-remove"></i></button>' +
+        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+        '<h3>' + title + '</h5>' +
+        "<p>" + description + "</p>" +
+        '</div>';
     }
 
     var timelineBlocks = $('.cd-timeline-block'),
-        offset = 0.8;
+    offset = 0.8;
 
     //hide timeline blocks which are outside the viewport
     hideBlocks(timelineBlocks, offset);
@@ -110,11 +133,6 @@ $(function() {
             ($(this).offset().top <= $(window).scrollTop() + $(window).height() * offset && $(this).find('.cd-timeline-img').hasClass('is-hidden')) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
         });
     }
-
-    smoothScroll.init({
-        // offset: 78,
-        scrollOnLoad: false
-    });
 
     //Make sure navbar closes when link is clicked
     $(document).on('click', '.navbar-collapse.in', function(e) {
