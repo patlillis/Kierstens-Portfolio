@@ -134,8 +134,9 @@ p {
   color: $color-light;
 }
 
-.button {
-	display: inline-block;
+.button,
+.sweet-alert .confirm {
+	  display: inline-block;
     margin-bottom: 0;
     font-weight: normal;
     text-align: center;
@@ -153,19 +154,23 @@ p {
     text-transform: uppercase;
 }
 
-.button.ghost-button {
-	background-color: transparent;
-    border: 2px solid $color-dark;
-    font-weight: 600;
-    transition: background-color .3s ease-out, color .3s ease-out;
+.button.ghost-button,
+.sweet-alert .confirm {
+  border-radius: 0;
+  background-color: transparent !important;
+  border: 2px solid $color-dark;
+  font-weight: 600;
+  transition: background-color .3s ease-out, color .3s ease-out;
+  color: $color-dark;
 }
 
-.button.ghost-button:hover {
-	background-color: $color-dark;
-	color: $color-light;
+.button.ghost-button:hover,
+.sweet-alert .confirm:hover {
+	background-color: $color-dark !important;
+	color: $color-light !important;
 }
 #contact-form .form-control {
-    background: $color-dark;
+    background: $color-dark !important;
     color: $color-light;
     border: none;
     border-radius: 1px;
@@ -199,6 +204,12 @@ p {
     margin: 0px 0px 30px;
     resize: vertical;
     height: auto;
+}
+
+
+.linked a {
+  color: $color-dark;
+  font-weight: bold;
 }
 
 
@@ -275,4 +286,30 @@ p {
   .row.row-padding {
     padding-bottom: 15px;
   }
+}
+
+.sweet-alert {
+    border-radius: 0 !important;
+    border: 15px solid;
+}
+
+.sweet-alert h2 {
+  color: #341139;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 0;
+  /* margin-bottom: 50px; */
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 72px;
+  letter-spacing: -2px;
+}
+
+.sweet-alert p {
+  margin: 0 0 30px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: $font-color;
 }
