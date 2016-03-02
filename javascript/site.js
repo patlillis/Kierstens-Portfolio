@@ -62,7 +62,7 @@ $(function() {
     }
 
 
-    var portfolioItems = $('#my_work .item-image');
+    var portfolioItems = $('#my_work .item a');
     var portfolioItemsData = [{
         title: 'St. Catherine of Siena Academy',
         description: "A video about the educational and spiritual benefits of this women's Catholic high school. Footage captured by Highway Media Inc."
@@ -84,8 +84,7 @@ $(function() {
     }];
 
     for (var i = 0; i < portfolioItemsData.length; i++) {
-        portfolioItems.eq(2 * i)
-            .add(portfolioItems.eq((2 * i) + 1))
+        portfolioItems.eq(i)
             .magnificPopup({
                 disableOn: 700,
                 type: 'iframe',
@@ -211,9 +210,11 @@ $(function() {
             } else {
                 var url = '//formspree.io/',
                     e = "pnjwxyjsqnqqnx%lrfnq%htr";
-                    // e = "qnqqnxur%lrfnq%htr";
+                // e = "qnqqnxur%lrfnq%htr";
 
-                url += caesarShift(e, -5).replace('%', '@').replace('%', '.');
+                url += caesarShift(e, -5)
+                    .replace('%', '@')
+                    .replace('%', '.');
 
                 $.ajax({
                     url: url,
@@ -242,23 +243,35 @@ $(function() {
             event.stopPropagation();
             return false;
         });
+
+    var speed = 250,
+        easing = mina.easeinout;
+
+    [].slice.call(document.querySelectorAll('.item.animation-test > a'))
+        .forEach(function(el) {
+            var s = Snap(el.querySelector('svg')),
+                path = s.select('path'),
+                pathConfig = {
+                    from: path.attr('d'),
+                    to: el.getAttribute('data-path-hover')
+                };
+
+            el.addEventListener('mouseenter', function() {
+                path.animate({
+                    'path': pathConfig.to
+                }, speed, easing);
+            });
+
+            el.addEventListener('mouseleave', function() {
+                path.animate({
+                    'path': pathConfig.from
+                }, speed, easing);
+            });
+        });
 });
 
 
-/* 
- * Caesar cipher
- * 
- * Copyright (c) 2015 Project Nayuki
- * All rights reserved. Contact Nayuki for licensing.
- * https://www.nayuki.io/page/caesar-cipher-javascript
- */
-
-"use strict";
-
-
-
-/*
- * Returns the result of having each alphabetic letter of the given text string shifted forward
+/* Returns the result of having each alphabetic letter of the given text string shifted forward
  * by the given amount, with wraparound. Case is preserved, and non-letters are unchanged.
  * Examples:
  *   caesarShift("abz",  0) = "abz"
