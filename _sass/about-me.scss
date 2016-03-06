@@ -3,6 +3,14 @@
 Modules - reusable parts of our design
 
 -------------------------------- */
+#about-me {
+  background-color: $blue;
+
+  .section-title {
+    color: $orange;
+  }
+}
+
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
@@ -36,7 +44,7 @@ Main components
   left: 18px;
   height: 100%;
   width: 4px;
-  background: $color-light;
+  background: $gray3;
   border-radius: 4px;
 }
 @media only screen and (min-width: 1170px) {
@@ -84,21 +92,14 @@ Main components
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px $color-light, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px $gray3, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
   text-align: center;
+  color: $orange;
+  background: $gray1;
 }
 .cd-timeline-img i {
   font-size: 20px;
   margin-top: 10px;
-}
-.cd-timeline-img.cd-picture {
-  background: $color-dark;
-}
-.cd-timeline-img.cd-movie {
-  background: $color-dark;
-}
-.cd-timeline-img.cd-grad {
-  background: $color-dark;
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
@@ -186,12 +187,17 @@ Main components
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  background: $color-light;
+  background: $white;
   // border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 3px 0 #color-dark;
-  color: $color-dark;
+  box-shadow: 0 3px 0 $gray3;
+  color: $gray3;
 }
+
+.cd-timeline-content h3 {
+  color: $orange;
+}
+
 .cd-timeline-content:after {
   content: "";
   display: table;
@@ -213,7 +219,7 @@ Main components
   height: 0;
   width: 0;
   border: 7px solid transparent;
-  border-right: 7px solid $color-light;
+  border-right: 7px solid $white;
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-content {
@@ -225,7 +231,7 @@ Main components
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: $color-light;
+    border-left-color: $white;
   }
   .cd-timeline-content .cd-read-more {
     float: left;
@@ -235,7 +241,8 @@ Main components
     width: 100%;
     left: 122%;
     top: 6px;
-    color: $color-light;
+    color: $white;
+    font-weight: 500;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;
@@ -245,7 +252,7 @@ Main components
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: $color-light;
+    border-right-color: $white;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right;

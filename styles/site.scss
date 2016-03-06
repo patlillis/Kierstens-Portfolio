@@ -10,19 +10,21 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 // sass for Partials
 @import "navbar";
-@import "about_me";
-@import "what_i_do";
-@import "my_work";
+@import "about-me";
+@import "what-i-do";
+@import "my-work";
 @import "quote";
+@import "contact-me";
 
 @charset "utf-8";
 
 body {
-  background-color: $bg-color;
+  position: relative;
+  // background-color: $bg-color;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: $font-color;
+  color: $blue;
 }
 
 .row.row-padding {
@@ -51,11 +53,11 @@ img
 
 .section {
   padding: 40px 0;
-  background-color: $color-light;
+  background-color: $white;
 }
 
 .section-title {
-  color: $color-dark;
+  color: $orange;
   text-align: center;
   text-transform: capitalize;
   margin-top: 0;
@@ -73,25 +75,22 @@ img
 
 .subsection-title {
   font-weight: 300;
-  color: $color-dark;
+  color: $blue;
   text-align: center;
 }
 
-.site-title {
-  text-transform: capitalize;
-}
 
 .section-dark {
-  background-color: $color-dark;
-  color: $color-light;
+  background-color: $blue;
+  color: $white;
 }
 
 .section-dark .section-title {
-  color: $color-light;
+  color: $orange;
 }
 
 .section-subtitle {
-  color: $color-dark;
+  color: $blue;
   text-align: center;
 }
 
@@ -105,22 +104,27 @@ img
   .message-box {
     width: 90%;
     margin: 300px auto 0;
-    background: $color-dark;
+    background: $white;
     padding: 20px 0;
 
-    .section-title, .section-subtitle {
-      color: $color-light;
+    .section-subtitle {
+      color: $blue;
     }
   }
 }
 
+.site-title {
+  text-transform: capitalize;
+  color: $orange;
+}
+
 .accomplishment-card {
-  border: 1px solid $color-light;
+  border: 1px solid $white;
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 6px;
   box-shadow: 3px 3px 6px -3px rgba(0, 0, 0, 0.75);
-  background-color: $color-dark;
+  background-color: $blue;
 }
 
 p {
@@ -131,185 +135,5 @@ p {
 }
 
 .text-inverted {
-  color: $color-light;
-}
-
-.button,
-.sweet-alert .confirm {
-	  display: inline-block;
-    margin-bottom: 0;
-    font-weight: normal;
-    text-align: center;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    background-image: none;
-    border: 1px solid transparent;
-    white-space: nowrap;
-    padding: 8px 20px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    text-transform: uppercase;
-}
-
-.button.ghost-button,
-.sweet-alert .confirm {
-  border-radius: 0;
-  background-color: transparent !important;
-  border: 2px solid $color-dark;
-  font-weight: 600;
-  transition: background-color .3s ease-out, color .3s ease-out;
-  color: $color-dark;
-}
-
-.button.ghost-button:hover,
-.sweet-alert .confirm:hover {
-	background-color: $color-dark !important;
-	color: $color-light !important;
-}
-#contact-form .form-control {
-    background: $color-dark !important;
-    color: $color-light;
-    border: none;
-    border-radius: 1px;
-    outline: none;
-    box-shadow: none;
-    margin-bottom: 30px;
-    height: 50px;
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 300;
-    padding-left: 55px;
-}
-#contact-form .form-group [class*="fa"] {
-    display: block;
-    width: 50px;
-    position: absolute;
-    top: 0;
-    left: 5px;
-    // color: $color-dark;
-    font-size: 32px;
-    line-height: 50px;
-    text-align: center;
-    font-weight: 300;
-}
-#contact-form .control-wrapper {
-  position: relative;
-}#contact-form textarea.form-control {
-    max-width: 100%;
-    min-width: 100%;
-    padding-top: 14px;
-    margin: 0px 0px 30px;
-    resize: vertical;
-    height: auto;
-}
-
-
-.linked a {
-  color: $color-dark;
-  font-weight: bold;
-}
-
-
-.social-links {
-    list-style:none;
-    margin:0;
-    padding:0;
-    margin-bottom:30px;
-}
-
-.social-links li{
-    display:inline-block;
-    margin:0 5px;
-    border-radius:3px;
-    box-shadow:0 4px 0 transparent;
-    -webkit-transition:all .3s ease-out;
-    transition:all .3s ease-out;
-}
-
-.social-links li a {
-    display:block;
-    color:rgba($color-light, 0.9);
-    font-size:21px;
-    width:50px;
-    height:50px;
-    line-height:50px;
-    text-align:center;
-    background:rgba($color-dark,0.5);
-    border-radius:50%;
-    -webkit-transition:all .3s ease-out;
-    transition:all .3s ease-out;
-}
-
-.social-links li a:hover {
-    color:$color-light;
-    background:$color-dark;
-}
-
-// ::-webkit-input-placeholder {
-//   color: $color-light;
-// }
-
-// /* Firefox 18- */
-// :-moz-placeholder {
-//   color: $color-light;
-// }
-
-// /* Firefox 19+ */
-// ::-moz-placeholder {
-//   color: $color-light;
-// }
-
-// IE 10+
-// :-ms-input-placeholder {
-//   color: $color-light;
-// }
-
-// /* Edge */
-// ::-ms-input-placeholder {
-//   color: $color-light;
-// }
-
-// /* Default Usage */
-// :placeholder-shown {
-//   color: $color-light;
-// }
-
-@media (max-width: 767px) { 
-  .section {
-    padding: 15px 0;
-  }
-
-
-  .row.row-padding {
-    padding-bottom: 15px;
-  }
-}
-
-.sweet-alert {
-    border-radius: 0 !important;
-    border: 15px solid;
-}
-
-.sweet-alert h2 {
-  color: #341139;
-  text-align: center;
-  text-transform: capitalize;
-  margin-top: 0;
-  /* margin-bottom: 50px; */
-  font-size: 60px;
-  font-weight: 800;
-  line-height: 72px;
-  letter-spacing: -2px;
-}
-
-.sweet-alert p {
-  margin: 0 0 30px;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 400;
-  margin-bottom: 0;
-  color: $font-color;
+  color: $white;
 }

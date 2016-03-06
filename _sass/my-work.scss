@@ -1,9 +1,14 @@
-#my_work {
+#my-work {
 
 		/*-----------------------------------------------------------------------------------*/
 	/*	PORTFOLIO
 	/*-----------------------------------------------------------------------------------*/
 
+	background-color: $blue;
+
+	.section-title {
+		color: $orange;
+	}
 
 	.portfolio-meta img 
 	{
@@ -32,7 +37,7 @@
 
 	.frame-overlay
 	{
-		background:$color-light;
+		background:$white;
 		opacity: 0;
 		width:100%;
 		height:100%;
@@ -56,7 +61,7 @@
 		top: 28%;
 		text-align: center;
 		font-size: 20px;
-		color: $color-dark;
+		color: $blue;
 		vertical-align: middle;
 		display: block;
 		font-weight: 600;
@@ -142,12 +147,12 @@
 /* magnific PopUp */
 .mfp-bg 
 {
-	background: $color-light !important;
+	background: $white !important;
 }
 
 .white-popup-block 
 {
-	color: $color-dark !important;
+	color: $blue !important;
 }
 
 button.mfp-close, button.mfp-arrow 
@@ -165,16 +170,17 @@ button.mfp-close, button.mfp-arrow
 div.pp_default .pp_loaderIcon { background: url(../img/prettyPhoto/default/light_loader.gif) center center no-repeat; } 
 	/* Loader icon */
 div.pp_default .pp_description {
-	color:$color-dark;
+	color:$blue;
 }
 
 .mfp-content h1, .mfp-content h2, .mfp-content h3, .mfp-content h4,.mfp-content h5, .mfp-content h6 
 {
-	color : $color-dark !important;
-	letter-spacing: -0.7px;
-	// font-size: 20px;
-	font-weight: 600;
+	color : $orange;
 }
+
+ .mfp-content p {
+ 	color: $blue;
+ }
 
 .mfp-wrap
  {
@@ -229,50 +235,7 @@ div.pp_default .pp_description {
     right: 0;
     margin-right: -21px;
     margin-top: -21px;
-	color: $color-dark;
-
-	// -webkit-user-select: none;
- //    -moz-user-select: none;
- //    user-select: none;
-	// width: 44px;
- //    height: 44px;
- //    line-height: 44px;
- //    position: absolute;
- //    right: 0;
- //    top: 0;
- //    text-decoration: none;
- //    text-align: center;
- //    opacity: 0.65;
- //    filter: alpha(opacity=65);
- //    padding: 0 0 18px 10px;
- //    color: #FFF;
- //    font-style: normal;
- //    font-size: 28px;
- //    font-family: Arial, Baskerville, monospace;
-	// width: 30px !important;
- //    height: 30px;
- //    // background: url(../images/sprite.png) 2px 1px no-repeat !important;
- //    cursor: pointer;
- //    text-indent: 999px;
- //    margin-right: -21px;
- //    margin-top: -21px;
-	// overflow: visible;
- //    cursor: pointer;
- //    background: transparent;
- //    border: 0;
- //    -webkit-appearance: none;
- //    display: block;
- //    outline: none;
- //    padding: 0;
- //    z-index: 1046;
- //    -webkit-box-shadow: none;
- //    box-shadow: none;
-	// color: #FFF;
- //    right: -6px;
- //    text-align: right;
- //    padding-right: 6px;
- //    width: 100%;
-	// top: -40px;
+	color: $blue;
 }
 
 
@@ -287,7 +250,7 @@ div.pp_default .pp_description {
 	position: relative;
 	overflow: hidden;
 	margin: 5px;
-	background: white;
+	background: $white;
 }
 
 .item.animation-test figure img {
@@ -310,30 +273,28 @@ div.pp_default .pp_description {
 	text-align: center;
 }
 
-.item.animation-test figcaption h2 {
-	margin: 0 0 20px 0;
-	color: $text-color;;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 300;
-	font-size: 130%;
+.item.animation-test figcaption h3 {
+	margin: 15px 0;
+	color: $orange;
+	// text-transform: uppercase;
+	// letter-spacing: 1px;
+	// font-weight: 500;
+	// font-size: 130%;
 	transition: transform 0.3s;
-	letter-spacing: -0.7px;
-	font-size: 20px;
-	color: $color-dark;
+	// letter-spacing: -0.7px;
+	// font-size: 20px;
 	vertical-align: middle;
-	font-weight: 600;
 	opacity: 0.9;
 }
 
 .item.animation-test figcaption p {
 	padding: 0 20px;
-	color: $text-color;;
-	font-weight: 300;
+	color: $gray3;
+	// font-weight: 300;
 	transition: opacity 0.3s, transform 0.3s;
 }
 
-.item.animation-test figcaption h2,
+.item.animation-test figcaption h3,
 .item.animation-test figcaption p {
 	transform: translateY(15px);
     margin-top: 35px;
@@ -350,7 +311,7 @@ div.pp_default .pp_description {
 }
 
 .item.animation-test figcaption,
-.item.animation-test figcaption h2,
+.item.animation-test figcaption h3,
 .item.animation-test figcaption p,
 .item.animation-test figure button {
 	backface-visibility: hidden;
@@ -372,7 +333,7 @@ div.pp_default .pp_description {
 	opacity: 0.6;
 }
 
-.item.animation-test a:hover figcaption h2,
+.item.animation-test a:hover figcaption h3,
 .item.animation-test a:hover figcaption p {
     transform: translateY(-50%);
 }
@@ -385,7 +346,7 @@ div.pp_default .pp_description {
 	top: 50%;
 	left: 50%;
 	background: transparent;
-	color: $color-dark;
+	color: $blue;
 	font-size: 106px;
 	opacity: 0;
 	margin-top: 35px;	

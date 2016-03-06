@@ -1,0 +1,123 @@
+#contact-me {
+    background: $gray1;
+    color: $blue;
+
+    .section-title {
+        color: $orange;
+    }
+}
+
+
+.button,
+.sweet-alert .confirm {
+	  display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 8px 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-transform: uppercase;
+}
+
+.button.ghost-button,
+.sweet-alert .confirm {
+  border-radius: 0;
+  background-color: transparent !important;
+  border: 2px solid $blue;
+  font-weight: 600;
+  transition: background-color .3s ease-out, color .3s ease-out;
+  color: $blue;
+}
+
+.button.ghost-button:hover,
+.sweet-alert .confirm:hover {
+	background-color: $blue !important;
+	color: $white !important;
+}
+#contact-form .form-control {
+    background: $blue !important;
+    color: $white;
+    border: none;
+    border-radius: 1px;
+    outline: none;
+    box-shadow: none;
+    margin-bottom: 30px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 300;
+    padding-left: 55px;
+}
+#contact-form .form-group [class*="fa"] {
+    display: block;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 32px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 300;
+}
+#contact-form .control-wrapper {
+  position: relative;
+}#contact-form textarea.form-control {
+    max-width: 100%;
+    min-width: 100%;
+    padding-top: 14px;
+    margin: 0px 0px 30px;
+    resize: vertical;
+    height: auto;
+}
+
+
+.linked a {
+  color: $orange;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) { 
+  .section {
+    padding: 15px 0;
+  }
+
+  .row.row-padding {
+    padding-bottom: 15px;
+  }
+}
+
+.sweet-alert {
+    border-radius: 0 !important;
+    border: 15px solid;
+    color: $blue;
+}
+
+.sweet-alert h2 {
+  color: $orange;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 0;
+  /* margin-bottom: 50px; */
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 72px;
+  letter-spacing: -2px;
+}
+
+.sweet-alert p {
+  margin: 0 0 30px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 400;
+  margin-bottom: 0;
+  color: $blue;
+}

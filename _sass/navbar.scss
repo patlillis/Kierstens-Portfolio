@@ -1,5 +1,5 @@
 #main-navbar.scrolled .navbar-brand {
-    color: $color-dark;
+    color: $gray3;
 }
 
 #main-navbar {
@@ -11,8 +11,8 @@
 }
 
 #main-navbar.scrolled {
-    background: $color-light;
-    border-bottom: 1px solid $color-dark;
+    background: $white;
+    border-bottom: 1px solid $blue;
 }
 
 #main-navbar .container {
@@ -38,7 +38,13 @@
 #main-navbar.scrolled .nav a,
 #main-navbar.scrolled .nav a:active,
 #main-navbar.scrolled .nav a:hover {
-    color: $color-dark;
+    color: $blue;
+}
+
+#main-navbar.scrolled .nav li.active a,
+#main-navbar.scrolled .nav li.active a:active,
+#main-navbar.scrolled .nav li.active a:hover {
+    color: $orange;
 }
 
 #main-navbar li {
@@ -61,45 +67,49 @@
 
 /* ===== COlors ====== */
 
-#main-navbar .navbar-nav > li > a {
-    color: $color-light;
+#main-navbar:not(.scrolled) .navbar-nav > li:not(.active) > a {
+    color: $white;
+}
+
+#main-navbar:not(.scrolled) .navbar-nav > li.active > a {
+    color: $orange;
 }
 
 .navbar-default .navbar-toggle {
-    border-color: $color-dark;
+    border-color: $blue;
 }
 
 #main-navbar .navbar-toggle .icon-bar {
-    background: $color-dark;
+    background: $blue;
 }
 
 #main-navbar .navbar-toggle:hover,
 #main-navbar .navbar-toggle:focus,
 #main-navbar .navbar-toggle:not(.collapsed) {
-    background-color: $color-dark;
-    border-color: $color-light;
+    background-color: $blue;
+    border-color: $white;
 }
 
 #main-navbar .navbar-toggle:hover .icon-bar,
 #main-navbar .navbar-toggle:focus .icon-bar,
 #main-navbar .navbar-toggle:not(.collapsed) .icon-bar {
-    background: $color-light;
+    background: $white;
 }
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: $color-dark;
+    border-color: $blue;
 }
 
 @media (max-width: 767px) {
     #main-navbar .navbar-brand {
-        color: $color-dark;
+        color: $blue;
     }
     #main-navbar .navbar-nav {
         margin-top: 0;
         margin-bottom: 0;
     }
     #main-navbar {
-        background: $color-light;
+        background: $white;
         border-bottom-width: 1px;
     }
     #main-navbar.scrolled .container,
@@ -112,20 +122,20 @@
     #main-navbar .nav a,
     #main-navbar .nav a:active,
     #main-navbar .nav a:hover {
-        color: $color-dark;
+        color: $blue;
         text-align: center;
     }
     #main-navbar .nav li:active,
     #main-navbar .nav li:focus,
     #main-navbar .nav li:hover {
-        background-color: rgba($color-dark, 0.2);
+        background-color: $gray1;
     }
     #main-navbar .nav a:before {
         display: none;
     }
     #main-navbar {
-        background: $color-light;
-        border-bottom: 1px solid $color-dark;
+        background: $white;
+        border-bottom: 1px solid $blue;
     }
     .container > .navbar-header,
     .container > .navbar-collapse,
@@ -141,7 +151,7 @@
     }
 
     /* ===== COlors ====== */
-    #main-navbar .navbar-nav > li > a {
-        color: $color-dark;
+    #main-navbar .navbar-nav > li:not(.active) > a {
+        color: $blue !important;
     }
 }

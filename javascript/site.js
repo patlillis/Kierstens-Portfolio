@@ -4,6 +4,12 @@
 
 $(function() {
     /*============================================
+    Hook up Scrollspy
+    ==============================================*/
+    // $('body').scrollspy({ target: '#main-navbar' });
+
+
+    /*============================================
     Resize Functions
     ==============================================*/
     $(window)
@@ -62,7 +68,7 @@ $(function() {
     }
 
 
-    var portfolioItems = $('#my_work .item a');
+    var portfolioItems = $('#my-work .item a');
     var portfolioItemsData = [{
         title: 'St. Catherine of Siena Academy',
         description: "A video about the educational and spiritual benefits of this women's Catholic high school. Footage captured by Highway Media Inc."

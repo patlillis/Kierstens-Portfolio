@@ -1,9 +1,10 @@
 blockquote,
 .blockquote,
 .blockquote-reverse {
-	border-color: $color-dark;
+	border-color: $orange;
+	color: $blue;
 }
 
 blockquote footer, blockquote small, blockquote .small {
-	color: $color-dark;
+	color: $gray3;
 }
