@@ -76,16 +76,16 @@ $(function() {
         title: 'Plymouth Rocks! City Promo',
         description: "30-second commercial about Plymouth, MI. Footage and guitar animation provided by Highway Media Inc."
     }, {
-        title: 'OLGC Tithing',
-        description: "A video for Our Lady of Good Counsel Catholic Church about the importance of tithing. Footage captured by Highway Media Inc."
+        title: 'Manresa Jesuit Retreat House Promo',
+        description: "A video introducing Manresa Jesuit Retreat House and describing its impact on the community. Footage captured by Highway Media Inc."
     }, {
         title: 'KIDSGala Promo Video',
         description: 'A video about the non-profit KIDSgala, which "provides a celebration of life to children who have or are battling a life altering event...." Footage captured by VideoMagic Productions.'
     }, {
-        title: 'Roemer Wedding Video',
+        title: 'Tiffany & Zac\'s Wedding Film',
         description: "Wedding recap film. Footage captured by VideoMagic Productions."
     }, {
-        title: 'Bronik Wedding Video',
+        title: 'Stephanie & Kyle\'s Wedding Film',
         description: "Wedding recap film. Footage captured by VideoMagic Productions."
     }];
 
