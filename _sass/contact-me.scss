@@ -30,6 +30,7 @@
 
 .button.ghost-button,
 .sweet-alert .confirm {
+  text-decoration: none;
   border-radius: 0;
   background-color: transparent !important;
   border: 2px solid $blue;
@@ -43,6 +44,16 @@
 	background-color: $blue !important;
 	color: $white !important;
 }
+
+.button.button-orange {
+  border-color: $orange;
+  color: $orange;
+}
+
+.button.button-orange:hover {
+  background-color: $orange !important;
+}
+
 #contact-form .form-control {
     background: $blue !important;
     color: $white;

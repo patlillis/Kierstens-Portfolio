@@ -1,14 +1,4 @@
-//= require_tree .
-//= stub plugins
-
-
 $(function() {
-    /*============================================
-    Hook up Scrollspy
-    ==============================================*/
-    // $('body').scrollspy({ target: '#main-navbar' });
-
-
     /*============================================
     Resize Functions
     ==============================================*/
@@ -70,8 +60,7 @@ $(function() {
 
     var portfolioItems = $('#my-work .item a');
     var portfolioItemsData = [{
-        title: 'St. Catherine of Siena Academy',
-        description: "A video about the educational and spiritual benefits of this women's Catholic high school. Footage captured by Highway Media Inc."
+        title: '2016 Video Editing Demo Reel'
     }, {
         title: 'Plymouth Rocks! City Promo',
         description: "30-second commercial about Plymouth, MI. Footage and guitar animation provided by Highway Media Inc."
@@ -79,8 +68,8 @@ $(function() {
         title: 'Manresa Jesuit Retreat House Promo',
         description: "A video introducing Manresa Jesuit Retreat House and describing its impact on the community. Footage captured by Highway Media Inc."
     }, {
-        title: 'KIDSGala Promo Video',
-        description: 'A video about the non-profit KIDSgala, which "provides a celebration of life to children who have or are battling a life altering event...." Footage captured by VideoMagic Productions.'
+        title: 'St. Catherine of Siena Academy',
+        description: 'A video about the educational and spiritual benefits of this women\'s Catholic high school. Footage captured by Highway Media Inc.'
     }, {
         title: 'Tiffany & Zac\'s Wedding Film',
         description: "Wedding recap film. Footage captured by VideoMagic Productions."
@@ -118,8 +107,9 @@ $(function() {
         return '<div class="mfp-iframe-scaler" style="overflow: initial;">' +
             '<button class="mfp-close-custom"><i class="glyphicon glyphicon-remove"></i></button>' +
             '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-            '<h3>' + title + '</h5>' +
-            "<p>" + description + "</p>" +
+
+            (title ? '<h3>' + title + '</h5>' : '') +
+            (description ? "<p>" + description + "</p>" : '') +
             '</div>';
     }
 
@@ -275,6 +265,22 @@ $(function() {
             });
         });
 });
+
+var $idown; // Keep it outside of the function, so it's initialized once.
+function downloadResume() {
+    var pdfUrl = '/assets/kiersten_lillis_resume_2016.pdf';
+
+    if ($idown && $idown.length > 0) {
+        $idown.attr('src', pdfUrl);
+    } else {
+        $idown = $('<iframe>', {
+                id: 'idown',
+                src: pdfUrl
+            })
+            .hide()
+            .appendTo('body');
+    }
+}
 
 
 /* Returns the result of having each alphabetic letter of the given text string shifted forward

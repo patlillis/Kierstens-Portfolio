@@ -251,6 +251,7 @@ div.pp_default .pp_description {
 	overflow: hidden;
 	margin: 5px;
 	background: $white;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
 .item.animation-test figure img {

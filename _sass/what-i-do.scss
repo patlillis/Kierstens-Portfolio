@@ -30,6 +30,7 @@
     font-size: 80px;
     background: $blue;
     padding: 35px 25px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
 .skill-item img {
@@ -39,4 +40,5 @@
     background: $blue;
     padding: 25px 25px;
     width: 150px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
