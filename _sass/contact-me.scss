@@ -40,7 +40,9 @@
 }
 
 .button.ghost-button:hover,
-.sweet-alert .confirm:hover {
+.sweet-alert .confirm:hover,
+.button.ghost-button:focus,
+.sweet-alert .confirm:focus {
 	background-color: $blue !important;
 	color: $white !important;
 }
@@ -50,7 +52,8 @@
   color: $orange;
 }
 
-.button.button-orange:hover {
+.button.button-orange:hover,
+.button.button-orange:focus {
   background-color: $orange !important;
 }
 

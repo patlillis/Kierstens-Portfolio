@@ -47,7 +47,8 @@
 		transition: opacity 0.15s ease-in;
 	}
 
-	.item-image:hover .frame-overlay
+	.item-image:hover .frame-overlay,
+	.item-image:focus .frame-overlay,
 	{
 		opacity:0.8!important;
 	}
@@ -74,7 +75,8 @@
 		position:absolute;
 		left:45%;
 	}	
-	.item-image:hover .portfolio-meta 
+	.item-image:hover .portfolio-meta,
+	.item-image:focus .portfolio-meta 
 	{
 		opacity:0.8!important;
 	}
@@ -218,7 +220,10 @@ div.pp_default .pp_description {
 	background: url(assets/img/prettyPhoto/default/right.png) 50% 50% no-repeat;
 }
 
-.cycle-prev:hover, .cycle-next:hover 
+.cycle-prev:hover,
+.cycle-next:hover,
+.cycle-prev:focus,
+.cycle-next:focus
 { 
 	opacity: 1; 
 }
@@ -330,16 +335,20 @@ div.pp_default .pp_description {
 	fill: #fff;
 }
 
-.item.animation-test a:hover figure img {
+.item.animation-test a:hover figure img,
+.item.animation-test a:focus figure img {
 	opacity: 0.6;
 }
 
 .item.animation-test a:hover figcaption h3,
-.item.animation-test a:hover figcaption p {
+.item.animation-test a:hover figcaption p,
+.item.animation-test a:focus figcaption h3,
+.item.animation-test a:focus figcaption p {
     transform: translateY(-50%);
 }
 
-.item.animation-test a:hover figcaption p {
+.item.animation-test a:hover figcaption p,
+.item.animation-test a:focus figcaption p {
 	opacity: 0;
 }
 
@@ -354,7 +363,8 @@ div.pp_default .pp_description {
 	transform: translateY(-50%) translateX(-50%) scale(0.25);
 }
 
-.item.animation-test a:hover figure button {
+.item.animation-test a:hover figure button,
+.item.animation-test a:focus figure button {
 	opacity: 1;
 	transform: translateY(-50%) translateX(-50%) scale(1);
 }

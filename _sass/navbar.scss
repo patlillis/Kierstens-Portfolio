@@ -27,7 +27,8 @@
 
 #main-navbar .nav a,
 #main-navbar .nav a:active,
-#main-navbar .nav a:hover {
+#main-navbar .nav a:hover,
+#main-navbar .nav a:focus {
     padding: 0px 10px;
     font-size: 18px;
     line-height: 54px;
@@ -37,13 +38,15 @@
 
 #main-navbar.scrolled .nav a,
 #main-navbar.scrolled .nav a:active,
-#main-navbar.scrolled .nav a:hover {
+#main-navbar.scrolled .nav a:hover,
+#main-navbar.scrolled .nav a:focus {
     color: $blue;
 }
 
 #main-navbar.scrolled .nav li.active a,
 #main-navbar.scrolled .nav li.active a:active,
-#main-navbar.scrolled .nav li.active a:hover {
+#main-navbar.scrolled .nav li.active a:hover,
+#main-navbar.scrolled .nav li.active a:focus {
     color: $orange;
 }
 
@@ -121,12 +124,14 @@
     }
     #main-navbar .nav a,
     #main-navbar .nav a:active,
-    #main-navbar .nav a:hover {
+    #main-navbar .nav a:hover,
+    #main-navbar .nav a:focus {
         color: $blue;
         text-align: center;
     }
     #main-navbar .nav li:active,
     #main-navbar .nav li:focus,
+    #main-navbar .nav li:hover,
     #main-navbar .nav li:hover {
         background-color: $gray1;
     }

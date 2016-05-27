@@ -204,13 +204,14 @@ $(function() {
                     allowOutsideClick: true
                 });
             } else {
-                var url = '//formspree.io/',
-                    e = "pnjwxyjsqnqqnx%lrfnq%htr";
-                // e = "qnqqnxur%lrfnq%htr";
+                // var url = '//formspree.io/',
+                //     e = "pnjwxyjsqnqqnx%lrfnq%htr";
 
-                url += caesarShift(e, -5)
-                    .replace('%', '@')
-                    .replace('%', '.');
+                var url = '//getform.org/f/388ddf6a-1c5c-4b90-a35a-fb965ca52b9f';
+
+                // url += caesarShift(e, -5)
+                //     .replace('%', '@')
+                //     .replace('%', '.');
 
                 $.ajax({
                     url: url,
@@ -218,8 +219,8 @@ $(function() {
                         Name: name,
                         Email: email,
                         Message: message,
-                        _subject: 'New Contact Request from ' + name,
-                        _gotcha: gotcha
+                        // _subject: 'New Contact Request from ' + name,
+                        // _gotcha: gotcha
                     },
                     type: 'POST',
                     dataType: "json",
@@ -252,16 +253,20 @@ $(function() {
                     to: el.getAttribute('data-path-hover')
                 };
 
-            el.addEventListener('mouseenter', function() {
-                path.animate({
-                    'path': pathConfig.to
-                }, speed, easing);
+            ['mouseenter', 'focus'].forEach(function(event) {
+                el.addEventListener(event, function() {
+                    path.animate({
+                        'path': pathConfig.to
+                    }, speed, easing);
+                });
             });
 
-            el.addEventListener('mouseleave', function() {
-                path.animate({
-                    'path': pathConfig.from
-                }, speed, easing);
+            ['mouseleave', 'blur'].forEach(function(event) {
+                el.addEventListener(event, function() {
+                    path.animate({
+                        'path': pathConfig.from
+                    }, speed, easing);
+                });
             });
         });
 });
