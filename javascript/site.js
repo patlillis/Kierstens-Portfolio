@@ -204,14 +204,12 @@ $(function() {
                     allowOutsideClick: true
                 });
             } else {
-                // var url = '//formspree.io/',
-                //     e = "pnjwxyjsqnqqnx%lrfnq%htr";
+                 var url = '//formspree.io/',
+                     e = "pnjwxyjsqnqqnx%lrfnq%htr";
 
-                var url = '//getform.org/f/388ddf6a-1c5c-4b90-a35a-fb965ca52b9f';
-
-                // url += caesarShift(e, -5)
-                //     .replace('%', '@')
-                //     .replace('%', '.');
+                 url += caesarShift(e, -5)
+                     .replace('%', '@')
+                     .replace('%', '.');
 
                 $.ajax({
                     url: url,
@@ -219,8 +217,8 @@ $(function() {
                         Name: name,
                         Email: email,
                         Message: message,
-                        // _subject: 'New Contact Request from ' + name,
-                        // _gotcha: gotcha
+                        _subject: 'New Contact Request from ' + name,
+                        _gotcha: gotcha
                     },
                     type: 'POST',
                     dataType: "json",
