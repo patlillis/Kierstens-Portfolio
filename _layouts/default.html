@@ -1,20 +1,21 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
 
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<head>
+  <meta charset="utf-8">
 
-    <!-- Use title if it's in the page YAML frontmatter -->
-    <title>{{ page.title }}</title>
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <link rel="stylesheet" href="styles/sweetalert.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800|Raleway:400,700,800,900,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="styles/site.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/magnific-popup.css">
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title>{{ page.title }}</title>
+
+  <link rel="stylesheet" href="styles/sweetalert.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,800|Raleway:400,700,800,900,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="styles/site.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/magnific-popup.css">
 
   <body class="{{ page_classes }}" data-spy="scroll" data-target=".navbar" data-offset="100">
     {{ content }}
@@ -23,7 +24,6 @@
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="bower_components/smooth-scroll/dist/js//smooth-scroll.js"></script>
-    <!-- <script type="text/javascript" src="bower_components/jquery-backstretch/jquery.backstretch.js"></script> -->    
     <script type="text/javascript" src="javascript/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="javascript/sweetalert.min.js"></script>
     <script type="text/javascript" src="javascript/modernizr.js"></script>
@@ -32,4 +32,5 @@
     <!-- custom JavaScript -->
     <script type="text/javascript" src="{{ site.baseurl }}/javascript/site.js"></script>
   </body>
+
 </html>
