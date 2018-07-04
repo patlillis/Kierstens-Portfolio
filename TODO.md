@@ -5,6 +5,7 @@
 - Work samples: simpler subtitle, no weird animation
 - Skills: Bullet list, icons are less useful than text.
 - Remove DVD authoring skill
+- Remove Stephanie & Kyle's video (listed as Private)
 - Larger resume button
 - Update color scheme to match resume
 - "About Me" => "Experience"
