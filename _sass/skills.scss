@@ -1,12 +1,18 @@
-#what-i-do {
-    background: $gray1;
+#skills {
+    // background: $gray1;
+    // color: $blue;
 
     .section-title {
         color: $orange;
     }
 
     .subsection-title {
-        color: $blue;
+        color: white;
+        text-align: initial;
+    }
+
+    li {
+        font-size: 18px;
     }
 }
 

@@ -1,14 +1,5 @@
-#my-work {
-
-		/*-----------------------------------------------------------------------------------*/
-	/*	PORTFOLIO
-	/*-----------------------------------------------------------------------------------*/
-
-	background-color: $blue;
-
-	.section-title {
-		color: $orange;
-	}
+#work-samples {
+    background: $gray1;
 
 	.portfolio-meta img 
 	{
@@ -79,6 +70,63 @@
 	.item-image:focus .portfolio-meta 
 	{
 		opacity:0.8!important;
+	}
+
+
+	.thumbnail-wrapper {
+		position: relative;
+	}
+
+	figcaption {
+		text-align: center;
+	}
+
+	.play-button-wrapper {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+		text-decoration: none;
+
+		.play-button {
+			font-size: 106px;
+			margin-top: 50%;
+			transform: translateY(-53px);
+			color: white;
+			text-shadow: 0px 0px 3px black;
+		}
+
+		&:hover .play-button {
+			color: $orange;
+		}
+	}
+
+	
+	@media (max-width: 767px) {
+		.video-wrapper {
+			margin-bottom: 50px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.thumbnail-wrapper {
+			max-width: 500px;
+			height: 100%;
+		}
+
+		.play-button-wrapper {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
+			.play-button {
+				margin-top: 0;
+				transform: none;
+			}
+		}
 	}
 }
 

@@ -1,26 +1,20 @@
 ---
 ---
 @charset "utf-8";
-
 /* path to glyphicons */
 $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
-
 @import "variables";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-
 // sass for Partials
-@import "navbar";
-@import "about-me";
-@import "what-i-do";
-@import "my-work";
-@import "quote";
 @import "contact-me";
-
-@charset "utf-8";
+@import "experience";
+@import "navbar";
+@import "skills";
+@import "testimonials";
+@import "work-samples";
 
 body {
   position: relative;
-  // background-color: $bg-color;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 300;
@@ -39,16 +33,17 @@ body {
   margin-top: 0 !important;
 }
 
-img
-{
-  max-width:100%;
-  height:auto;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 @media screen {
-	input:focus, textarea:focus, button:focus {
-	    outline: none;
-	}
+  input:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
 }
 
 .section {
@@ -66,6 +61,7 @@ img
   font-weight: 800;
   line-height: 72px;
   letter-spacing: -2px;
+
   span {
     border-bottom: 5px solid;
     padding: 10px 0;
@@ -78,7 +74,6 @@ img
   color: $blue;
   text-align: center;
 }
-
 
 .section-dark {
   background-color: $blue;
@@ -100,16 +95,27 @@ img
   min-height: 500px;
   background-image: url('../images/headshot.jpg');
   background-size: cover;
-  background-position: 0 70%;
+  background-position: center 33%;
+  position: relative;
+
   .message-box {
-    width: 50%;
-    margin: 300px auto 0;
-    background: $white;
-    padding: 20px 0;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    right: 0;
+    bottom: 10%;
+    left: 0;
+
+    @media (max-width: 540px) {
+      bottom: 0;
+    }
+
+    .section-title {
+      margin: 10px 0 0;
+    }
 
     .section-subtitle {
       color: $blue;
+      margin: 30px 0;
     }
   }
 }

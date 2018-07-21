@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
     /*============================================
     Resize Functions
     ==============================================*/
@@ -32,7 +32,7 @@ $(function() {
         } else if (!isMobile && prevIsMobile) {
             console.log('Switching out of  Mobile');
             smoothScroll.init({
-                offset: 78,
+                offset: 74,
                 scrollOnLoad: false
             });
         }
@@ -58,9 +58,9 @@ $(function() {
     }
 
 
-    var portfolioItems = $('#my-work .item a');
+    var portfolioItems = $('#work-samples .video-wrapper .play-button-wrapper');
     var portfolioItemsData = [{
-        title: '2016 Video Editing Demo Reel'
+        title: 'Video Editing Demo Reel'
     }, {
         title: 'Plymouth Rocks! City Promo',
         description: "30-second commercial about Plymouth, MI. Footage and guitar animation provided by Highway Media Inc."
@@ -73,32 +73,29 @@ $(function() {
     }, {
         title: 'Tiffany & Zac\'s Wedding Film',
         description: "Wedding recap film. Footage captured by VideoMagic Productions."
-    }, {
-        title: 'Stephanie & Kyle\'s Wedding Film',
-        description: "Wedding recap film. Footage captured by VideoMagic Productions."
     }];
 
     for (var i = 0; i < portfolioItemsData.length; i++) {
-        portfolioItems.eq(i)
-            .magnificPopup({
-                disableOn: 700,
-                type: 'iframe',
-                mainClass: 'mfp-fade',
-                removalDelay: 160,
-                preloader: false,
-                closeBtnInside: true,
-                mainClass: 'my-mfp-slide-bottom',
-                fixedContentPos: true,
-                fixedBgPos: true,
-                iframe: {
-                    markup: magnificPopupContent(portfolioItemsData[i].title, portfolioItemsData[i].description)
-                }
-            });
+        var item = portfolioItems.eq(i);
+        item.magnificPopup({
+            disableOn: 700,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+            closeBtnInside: true,
+            mainClass: 'my-mfp-slide-bottom',
+            fixedContentPos: true,
+            fixedBgPos: true,
+            iframe: {
+                markup: magnificPopupContent(portfolioItemsData[i].title, portfolioItemsData[i].description)
+            }
+        });
     }
 
     // Make sure close button works
     $(document)
-        .on('click', '.mfp-close-custom', function() {
+        .on('click', '.mfp-close-custom', function () {
             portfolioItems.magnificPopup('close');
         });
 
@@ -121,44 +118,44 @@ $(function() {
 
     //on scolling, show/animate timeline blocks when enter the viewport
     $(window)
-        .on('scroll', function() {
-            (!window.requestAnimationFrame) ? setTimeout(function() {
+        .on('scroll', function () {
+            (!window.requestAnimationFrame) ? setTimeout(function () {
                 showBlocks(timelineBlocks, offset);
-            }, 100): window.requestAnimationFrame(function() {
+            }, 100) : window.requestAnimationFrame(function () {
                 showBlocks(timelineBlocks, offset);
             });
         });
 
     function hideBlocks(blocks, offset) {
-        blocks.each(function() {
+        blocks.each(function () {
             ($(this)
                 .offset()
                 .top > $(window)
-                .scrollTop() + $(window)
-                .height() * offset) && $(this)
-                .find('.cd-timeline-img, .cd-timeline-content')
-                .addClass('is-hidden');
+                    .scrollTop() + $(window)
+                        .height() * offset) && $(this)
+                            .find('.cd-timeline-img, .cd-timeline-content')
+                            .addClass('is-hidden');
         });
     }
 
     function showBlocks(blocks, offset) {
-        blocks.each(function() {
+        blocks.each(function () {
             ($(this)
                 .offset()
                 .top <= $(window)
-                .scrollTop() + $(window)
-                .height() * offset && $(this)
-                .find('.cd-timeline-img')
-                .hasClass('is-hidden')) && $(this)
-                .find('.cd-timeline-img, .cd-timeline-content')
-                .removeClass('is-hidden')
-                .addClass('bounce-in');
+                    .scrollTop() + $(window)
+                        .height() * offset && $(this)
+                            .find('.cd-timeline-img')
+                            .hasClass('is-hidden')) && $(this)
+                                .find('.cd-timeline-img, .cd-timeline-content')
+                                .removeClass('is-hidden')
+                                .addClass('bounce-in');
         });
     }
 
     //Make sure navbar closes when link is clicked
     $(document)
-        .on('click', '.navbar-collapse.in', function(e) {
+        .on('click', '.navbar-collapse.in', function (e) {
             if ($(e.target)
                 .is('a') && ($(e.target)
                     .attr('class') != 'dropdown-toggle')) {
@@ -168,15 +165,15 @@ $(function() {
         });
 
     $('#contact-form')
-        .on('submit', function(event) {
+        .on('submit', function (event) {
             var name = $('#contact-name')
                 .val(),
                 email = $('#contact-email')
-                .val(),
+                    .val(),
                 message = $('#contact-message')
-                .val(),
+                    .val(),
                 gotcha = $('#contact-gotcha')
-                .val();
+                    .val();
 
 
 
@@ -204,12 +201,12 @@ $(function() {
                     allowOutsideClick: true
                 });
             } else {
-                 var url = '//formspree.io/',
-                     e = "pnjwxyjsqnqqnx%lrfnq%htr";
+                var url = '//formspree.io/',
+                    e = "pnjwxyjsqnqqnx%lrfnq%htr";
 
-                 url += caesarShift(e, -5)
-                     .replace('%', '@')
-                     .replace('%', '.');
+                url += caesarShift(e, -5)
+                    .replace('%', '@')
+                    .replace('%', '.');
 
                 $.ajax({
                     url: url,
@@ -222,7 +219,7 @@ $(function() {
                     },
                     type: 'POST',
                     dataType: "json",
-                    success: function(result) {
+                    success: function (result) {
                         swal({
                             title: "Thanks!",
                             text: "Your message has been sent. I'll get back to your as soon as I can!",
@@ -241,45 +238,19 @@ $(function() {
 
     var speed = 250,
         easing = mina.easeinout;
-
-    [].slice.call(document.querySelectorAll('.item.animation-test > a'))
-        .forEach(function(el) {
-            var s = Snap(el.querySelector('svg')),
-                path = s.select('path'),
-                pathConfig = {
-                    from: path.attr('d'),
-                    to: el.getAttribute('data-path-hover')
-                };
-
-            ['mouseenter', 'focus'].forEach(function(event) {
-                el.addEventListener(event, function() {
-                    path.animate({
-                        'path': pathConfig.to
-                    }, speed, easing);
-                });
-            });
-
-            ['mouseleave', 'blur'].forEach(function(event) {
-                el.addEventListener(event, function() {
-                    path.animate({
-                        'path': pathConfig.from
-                    }, speed, easing);
-                });
-            });
-        });
 });
 
 var $idown; // Keep it outside of the function, so it's initialized once.
 function downloadResume() {
-    var pdfUrl = '/assets/kiersten_lillis_resume_2016.pdf';
+    var pdfUrl = '/assets/kiersten_lillis_resume_2018.pdf';
 
     if ($idown && $idown.length > 0) {
         $idown.attr('src', pdfUrl);
     } else {
         $idown = $('<iframe>', {
-                id: 'idown',
-                src: pdfUrl
-            })
+            id: 'idown',
+            src: pdfUrl
+        })
             .hide()
             .appendTo('body');
     }

@@ -1,162 +1,150 @@
 #main-navbar.scrolled .navbar-brand {
-    color: $gray3;
+  color: $gray3;
 }
 
 #main-navbar {
-    background: transparent;
-    box-shadow: 0 0 0px transparent;
-    -webkit-transition: background 0.2s ease-in-out;
-    transition: background 0.2s ease-in-out;
-    border-width: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid $blue;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 #main-navbar.scrolled {
-    background: $white;
-    border-bottom: 1px solid $blue;
+  background-color: $white;
 }
 
 #main-navbar .container {
-    padding: 30px 20px;
-    -webkit-transition: padding 0.2s ease-in-out;
-    transition: padding 0.2s ease-in-out;
-}
-
-#main-navbar.scrolled .container {
-    padding: 10px 20px;
+  padding: 10px 20px;
 }
 
 #main-navbar .nav a,
 #main-navbar .nav a:active,
 #main-navbar .nav a:hover,
 #main-navbar .nav a:focus {
-    padding: 0px 10px;
-    font-size: 18px;
-    line-height: 54px;
-    font-weight: 400;
-    background: transparent;
+  padding: 0px 10px;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 400;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
 }
 
-#main-navbar.scrolled .nav a,
-#main-navbar.scrolled .nav a:active,
-#main-navbar.scrolled .nav a:hover,
-#main-navbar.scrolled .nav a:focus {
-    color: $blue;
+#main-navbar .nav a,
+#main-navbar .nav a:active,
+#main-navbar .nav a:hover,
+#main-navbar .nav a:focus {
+  color: $blue;
 }
 
-#main-navbar.scrolled .nav li.active a,
-#main-navbar.scrolled .nav li.active a:active,
-#main-navbar.scrolled .nav li.active a:hover,
-#main-navbar.scrolled .nav li.active a:focus {
-    color: $orange;
+#main-navbar .nav li.active a,
+#main-navbar .nav li.active a:active,
+#main-navbar .nav li.active a:hover,
+#main-navbar .nav li.active a:focus {
+  color: $orange;
+  border-color: $orange;
 }
 
 #main-navbar li {
-    background: transparent;
-    margin: 0 10px;
-    border: 2px solid transparent;
+  background: transparent;
+  margin: 0 10px;
+  border: 2px solid transparent;
+  height: 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #main-navbar .dropdown-menu a {
-    font-size: 14px;
+  font-size: 14px;
 }
-
 
 /* Hover Effect */
 
 #main-navbar .nav a {
-    position: relative;
+  position: relative;
 }
-
 
 /* ===== COlors ====== */
 
-#main-navbar:not(.scrolled) .navbar-nav > li:not(.active) > a {
-    color: $white;
-}
-
-#main-navbar:not(.scrolled) .navbar-nav > li.active > a {
-    color: $orange;
-}
-
 .navbar-default .navbar-toggle {
-    border-color: $blue;
+  border-color: $blue;
 }
 
 #main-navbar .navbar-toggle .icon-bar {
-    background: $blue;
+  background: $blue;
 }
 
 #main-navbar .navbar-toggle:hover,
 #main-navbar .navbar-toggle:focus,
 #main-navbar .navbar-toggle:not(.collapsed) {
-    background-color: $blue;
-    border-color: $white;
+  background-color: $blue;
+  border-color: $white;
 }
 
 #main-navbar .navbar-toggle:hover .icon-bar,
 #main-navbar .navbar-toggle:focus .icon-bar,
 #main-navbar .navbar-toggle:not(.collapsed) .icon-bar {
-    background: $white;
+  background: $white;
 }
 
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: $blue;
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: $blue;
 }
 
 @media (max-width: 767px) {
-    #main-navbar .navbar-brand {
-        color: $blue;
-    }
-    #main-navbar .navbar-nav {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    #main-navbar {
-        background: $white;
-        border-bottom-width: 1px;
-    }
-    #main-navbar.scrolled .container,
-    #main-navbar:not(.scrolled) .container {
-        padding: 0px 20px;
-    }
-    #main-navbar .nav li {
-        margin: 0;
-    }
-    #main-navbar .nav a,
-    #main-navbar .nav a:active,
-    #main-navbar .nav a:hover,
-    #main-navbar .nav a:focus {
-        color: $blue;
-        text-align: center;
-    }
-    #main-navbar .nav li:active,
-    #main-navbar .nav li:focus,
-    #main-navbar .nav li:hover,
-    #main-navbar .nav li:hover {
-        background-color: $gray1;
-    }
-    #main-navbar .nav a:before {
-        display: none;
-    }
-    #main-navbar {
-        background: $white;
-        border-bottom: 1px solid $blue;
-    }
-    .container > .navbar-header,
-    .container > .navbar-collapse,
-    .container-fluid > .navbar-header,
-    .container-fluid > .navbar-collapse {
-        margin-left: -20px;
-        margin-right: -20px;
-    }
-
-    #main-navbar .navbar-toggle {
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    /* ===== COlors ====== */
-    #main-navbar .navbar-nav > li:not(.active) > a {
-        color: $blue !important;
-    }
+  #main-navbar .navbar-brand {
+    color: $blue;
+  }
+  #main-navbar .navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #main-navbar {
+    background: $white;
+    border-bottom-width: 1px;
+  }
+  #main-navbar.scrolled .container,
+  #main-navbar:not(.scrolled) .container {
+    padding: 0px 20px;
+  }
+  #main-navbar .nav li {
+    margin: 0;
+  }
+  #main-navbar .nav a,
+  #main-navbar .nav a:active,
+  #main-navbar .nav a:hover,
+  #main-navbar .nav a:focus {
+    color: $blue;
+    text-align: center;
+  }
+  #main-navbar .nav li:active,
+  #main-navbar .nav li:focus,
+  #main-navbar .nav li:hover,
+  #main-navbar .nav li:hover {
+    background-color: $gray1;
+  }
+  #main-navbar .nav a:before {
+    display: none;
+  }
+  #main-navbar {
+    background: $white;
+    border-bottom: 1px solid $blue;
+  }
+  .container>.navbar-header,
+  .container>.navbar-collapse,
+  .container-fluid>.navbar-header,
+  .container-fluid>.navbar-collapse {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  #main-navbar .navbar-toggle {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  /* ===== COlors ====== */
+  #main-navbar .navbar-nav>li:not(.active)>a {
+    color: $blue !important;
+  }
 }
