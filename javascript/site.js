@@ -201,7 +201,7 @@ $(function () {
                     allowOutsideClick: true
                 });
             } else {
-                var url = '//formspree.io/',
+                var url = 'https://formspree.io/',
                     e = "pnjwxyjsqnqqnx%lrfnq%htr";
 
                 url += caesarShift(e, -5)
@@ -242,7 +242,7 @@ $(function () {
 
 var $idown; // Keep it outside of the function, so it's initialized once.
 function downloadResume() {
-    var pdfUrl = '/assets/kiersten_lillis_resume_2018.pdf';
+    var pdfUrl = 'assets/kiersten_lillis_resume_2018.pdf';
 
     if ($idown && $idown.length > 0) {
         $idown.attr('src', pdfUrl);
