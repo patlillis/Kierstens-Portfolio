@@ -1,6 +1,6 @@
 # Website for Kiersten's Portfolio
 
-> http://kiersten.lillis.me/
+> http://www.kierstenlillis.com/video
 
 ## Running Locally
 
