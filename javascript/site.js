@@ -63,7 +63,7 @@ $(function () {
         title: 'Video Editing Demo Reel'
     }, {
         title: 'Plymouth Rocks! City Promo',
-        description: "30-second commercial about Plymouth, MI. Footage and guitar animation provided by Highway Media Inc."
+        description: '30-second commercial about Plymouth, MI. Footage and guitar animation provided by Highway Media Inc.'
     }, {
         title: 'Manresa Jesuit Retreat House Promo',
         description: "A video introducing Manresa Jesuit Retreat House and describing its impact on the community. Footage captured by Highway Media Inc."
@@ -72,7 +72,10 @@ $(function () {
         description: 'A video about the educational and spiritual benefits of this women\'s Catholic high school. Footage captured by Highway Media Inc.'
     }, {
         title: 'Tiffany & Zac\'s Wedding Film',
-        description: "Wedding recap film. Footage captured by VideoMagic Productions."
+        description: 'Wedding recap film. Footage captured by VideoMagic Productions.'
+    }, {
+        title: 'Innovation Insights with Dave Kingsbury',
+        description: 'An interview with former VP of Strategic Growth for Red Idea Partners, Dave Kingsbury, about innovation.'
     }];
 
     for (var i = 0; i < portfolioItemsData.length; i++) {
